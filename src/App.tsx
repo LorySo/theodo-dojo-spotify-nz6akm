@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import { fetchTracks } from './lib/fetchTracks';
 import { useQuery } from '@tanstack/react-query';
+import { SavedTrack } from 'spotify-types';
 
 // let trackIndex = 0;
 
@@ -43,7 +44,7 @@ const App = () => {
             Next track
         </button>
         <p/>Nombre de musiques : {tracks?.length}<p/>
-
+        <p/>{tracks[0]?.track.name}<p/>
       </div>
       <div className="App-buttons"></div>
     </div>

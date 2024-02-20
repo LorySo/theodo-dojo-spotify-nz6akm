@@ -1,3 +1,5 @@
+import { SavedTrack, SpotifyType } from "spotify-types";
+
 const apiToken: string = 'BQAqAqHMBCreHf1Ljl7XHPZytGFS4n2Ee-0QBS_5jUbve19gKCk4Oxjl5bpqJlFAfcmUV_kny0O8WKC2t_FpxoYsII7DzrJhBPShkv_G1lpHPuIdnqKOk0WY6DqWbT7MkpfOszP-gKTZ0I1nFBj9CItTzPbbtk2b6NAFengbieu2ZS6k89VbwiBWag_sFvufhDdalT-GGG1R1ig3cfWHPOdaJS142Q';
 
 export const fetchTracks = async () => {
@@ -10,7 +12,7 @@ export const fetchTracks = async () => {
   if (!response.ok) {
      throw new Error(`Fetching tracks failed with status ${response.status}`)
    }
-  const data = await response.json() as { items: unknown[] };
+  const data = await response.json() as { items: SavedTrack[] };
 
   return data.items;
 };
