@@ -25,6 +25,9 @@ const App = () => {
 		queryFn: fetchTracks
   });
 
+  console.log(tracks)
+  
+
   //le return est pour l'affichage, on définit les choses de l'app dans la fct directement
   return (
     <div className="App">
@@ -39,6 +42,8 @@ const App = () => {
         <button onClick={goToNextTrack}>
             Next track
         </button>
+        <p/>Nombre de musiques : {tracks?.length}<p/>
+
       </div>
       <div className="App-buttons"></div>
     </div>
