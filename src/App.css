@@ -19,7 +19,9 @@
 }
 
 .App-images {
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  background-color: red;
 }
 
 .App-buttons {
