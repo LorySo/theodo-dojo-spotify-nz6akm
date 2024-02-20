@@ -1,9 +1,10 @@
 import logo from './assets/logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { fetchTracks } from './lib/fetchTracks';
+import { useQuery } from '@tanstack/react-query';
 
 // let trackIndex = 0;
-
 
 const App = () => {
   const trackUrls = [
@@ -18,6 +19,12 @@ const App = () => {
   const goToNextTrack = () => {
     setTrackIndex(trackIndex + 1);
   }
+
+  const { data: tracks } = useQuery({
+		queryKey: ['tracks'],
+		queryFn: fetchTracks
+  });
+
   //le return est pour l'affichage, on définit les choses de l'app dans la fct directement
   return (
     <div className="App">
