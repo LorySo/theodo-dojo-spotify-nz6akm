@@ -29,14 +29,27 @@ const App = () => {
 		queryFn: fetchTracks
   });
 
-
-
   const checkAnswer = (id : number) => {
     if (id == trackIndex){
-      swal('Bravo');
+      swal('Bravo','sous-titre','success');
     } else {
-      swal('wrong answer');
+      swal('wrong answer', 'cest une alerte','error');
     }
+  }
+
+  const getRandomInt = (max : number) => {
+    return Math.floor(Math.random() * max);
+  }
+  let dd = getRandomInt(10); //reference modifiable
+
+  //methode qui prend en arg un nb et renvoie un tuple
+  const getRandomTuple = (max : number) => {
+    
+  }
+
+  //derniere tache de craftsman
+  const shuffleArray = (listeTrack : Array<SavedTrack>) => {
+
   }
 
   console.log(tracks)
@@ -62,8 +75,8 @@ const App = () => {
       </div>
       <div className="App-buttons">
       <button onClick={() => checkAnswer(0)}>{tracks ? tracks[0]?.track.name : 'loading'}</button>
-      <button onClick={() => checkAnswer(1)}>{tracks ? tracks[1]?.track.name : 'loading'}</button>
-      <button onClick={() => checkAnswer(2)}>{tracks ? tracks[2]?.track.name : 'loading'}</button>
+      <button onClick={() => checkAnswer(getRandomInt(10))}>{tracks ? tracks[getRandomInt(10)]?.track.name : 'loading'}</button>
+      <button onClick={() => checkAnswer(getRandomInt(10))}>{tracks ? tracks[getRandomInt(10)]?.track.name : 'loading'}</button>
       </div>
     </div>
   );
