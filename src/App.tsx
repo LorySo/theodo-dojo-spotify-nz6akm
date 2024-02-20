@@ -43,8 +43,8 @@ const App = () => {
         <button onClick={goToNextTrack}>
             Next track
         </button>
-        <p/>Nombre de musiques : {tracks?.length}<p/>
-        <p/>{tracks[0]?.track.name}<p/>
+        <p>Nombre de musiques : {tracks?.length}</p>
+        <p>{tracks ? tracks[0]?.track.name : 'loading'}</p>
       </div>
       <div className="App-buttons"></div>
     </div>
