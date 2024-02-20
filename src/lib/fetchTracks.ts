@@ -1,6 +1,6 @@
 import { SavedTrack, SpotifyType } from "spotify-types";
 
-const apiToken: string = 'BQAqAqHMBCreHf1Ljl7XHPZytGFS4n2Ee-0QBS_5jUbve19gKCk4Oxjl5bpqJlFAfcmUV_kny0O8WKC2t_FpxoYsII7DzrJhBPShkv_G1lpHPuIdnqKOk0WY6DqWbT7MkpfOszP-gKTZ0I1nFBj9CItTzPbbtk2b6NAFengbieu2ZS6k89VbwiBWag_sFvufhDdalT-GGG1R1ig3cfWHPOdaJS142Q';
+const apiToken: string = 'BQBG9xp054sCWDRMG7OzlKNshYS3xKKwiI5ZY60_M03v6Wb1kABKzaEd3WnwJvltFZT1JByNrQKUymtIBOYL6T7vP0cf97kHdoJA8LNK8i1DdjvKJ4zwumegjMkYnlc8NovIUwz9Kjqd5HIjSlq-HftNjt47DqVfPNP8UmNwQ0vwiTiK_OmG8GnuSlJtz8RS_vjILmQ5GBFcdpSEvUhABWnoSA_wyw';
 
 export const fetchTracks = async () => {
   const response = await fetch('https://api.spotify.com/v1/me/tracks', {
